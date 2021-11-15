@@ -5,9 +5,9 @@ module.exports = (app) => {
 
    
    app
-      .route('/users')
+      .route('/api/users')
       .get(usersController.getAllUsers)
    app
-      .route('/users/signup')
+      .route('/api/auth/signup')
       .post(usersController.signup)
 }

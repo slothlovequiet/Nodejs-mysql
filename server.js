@@ -1,10 +1,10 @@
+const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3350
-const bodyParser = require('body-parser')
+const port = process.env.PORT || 8888
 
-app.use(bodyParser.urlencoded({extended:true}))
-app.use(bodyParser.json())
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 
 const routes = require('./settings/route')
 routes(app)
