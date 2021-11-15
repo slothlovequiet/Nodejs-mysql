@@ -1,5 +1,5 @@
 const mysql = require('mysql')
-//const env = require('./../dbenv')
+//const env = require('./../config')
 
 const connection = mysql.createConnection({
    host: 'localhost',
