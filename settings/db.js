@@ -1,20 +1,20 @@
 const mysql = require("mysql");
-//const env = require('./../config')
+const config = require("./../config");
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "root",
-  database: "rest2",
+   host: config.HOST,
+   port: config.PORT,
+   user: config.DBUSER,
+   password: config.DBPASSWD,
+   database: config.DBNAME,
 });
 
 connection.connect((error) => {
-  if (error) {
-    return console.log("Ошибка подключения к БД!");
-  } else {
-    return console.log("Подключение успешно!");
-  }
+   if (error) {
+      return console.log("Ошибка подключения к БД!");
+   } else {
+      return console.log("Подключение успешно!");
+   }
 });
 
 module.exports = connection;
